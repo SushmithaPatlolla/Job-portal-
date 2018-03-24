@@ -1,0 +1,31 @@
+
+<!-- <table class="table table-stripped">
+    <tr ng-repeat="job in jobs">
+            <td>{{job.title}}</td>
+            <td>{{job.description}}</td>
+            <td>{{job.keywords}}</td>
+            <td>{{job.location}}</td>
+    </tr>
+</table> -->
+<div class="container">
+
+    <div class="panel panel-default">
+
+        <div class="panel-heading">Available Jobs</div>
+        
+        <table class="table">
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Keywords</th>
+                <th>Location</th>
+            </tr>
+                <tr ng-repeat="job in jobs">
+                        <td>{{job.title}}</td>
+                        <td>{{job.description}}</td>
+                        <td>{{job.keywords.toString()}}</td>
+                        <td>{{job.location}}</td>
+        </table>
+    </div>
+</div>
+

@@ -1,0 +1,34 @@
+<form>
+    <div class="input-append">
+        <input ng-model="searchTitle"  type="text" class="input-medium search-query" name="s" placeholder="Title" value="">
+        <input ng-model="searchDesc"  type="text" class="input-medium search-query" name="s" placeholder="Description" value="">
+        <input ng-model="searchKey"  type="text" class="input-medium search-query" name="s" placeholder="Keywords" value="">
+        <input ng-model="searchLoc"  type="text" class="input-medium search-query" name="s" placeholder="Location" value="">
+        <button ng-click="go()" type="submit">Go</button>
+    </div>
+
+</form>
+
+<div class="container"> 
+
+    <div class="jumbotron" ng-repeat="i in searchArr">
+        
+        <div class="panel panel-primary">
+            <!-- Default panel contents -->
+            <div class="panel-heading">{{i.title}}</div>
+            <div class="panel-body">
+                <h5>Description:</h5>
+                <p>{{i.description}}</p>
+                
+                <h5>Location:</h5>
+                <p>{{i.location}}</p>
+                
+                <h5>Keywords:</h5>
+                <div class= "container">
+                    <ul class="list-group">
+                        <li class="list-group-item" ng-repeat="key in i.keywords">{{key}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
